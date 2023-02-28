@@ -1,5 +1,5 @@
-## Tools
-- nextjs
+## Description
+Substance abuse app
 
 ## Team members
 - Olivia
