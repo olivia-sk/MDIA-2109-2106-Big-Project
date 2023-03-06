@@ -5,3 +5,13 @@ Substance abuse app
 - Olivia
 - Sierra
 - Elijah
+
+ ## Tools/Technologies
+ - GitHub
+ - Vercel
+ - Visual Studio Code
+ 
+ ## Language 
+ - next.js 13
+ - css
+ 
