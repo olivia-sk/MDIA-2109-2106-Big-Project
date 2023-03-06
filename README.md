@@ -1,5 +1,8 @@
-## Description
-Substance abuse app
+## Topic
+- Substance abuse app
+
+## Description 
+- Welcome to our Substance Abuse App! This app is designed to help people struggling with substance abuse start their journey toward recovery by providing resources on addiction and how it affects their body and mind.
 
 ## Team Members
 - Olivia
