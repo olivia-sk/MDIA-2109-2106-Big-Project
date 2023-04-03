@@ -17,6 +17,9 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Pie/>
+        <div>
+
+        </div>
         <Link href="" className={styles.link}><button className={styles.button}>Yes</button></Link>
       </main>
     </>

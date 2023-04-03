@@ -9,11 +9,6 @@
 
 .link{
   text-decoration: none;
-  color: rgb(147, 129, 255);
-}
-
-.link:hover {
-  color: white;
 }
 
 .button:hover {

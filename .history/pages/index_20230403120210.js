@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Pie/>
-        <Link href="" className={styles.link}><button className={styles.button}>Yes</button></Link>
+        <button className={styles.button}><Link></Link>Yes</button>
       </main>
     </>
   )

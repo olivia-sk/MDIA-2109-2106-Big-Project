@@ -2,8 +2,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import Pie from '@/components/PieChart'
-import Button from '@/components/Button'
-import Link from 'next/link'
 
 
 export default function Home() {
@@ -17,7 +15,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Pie/>
-        <Link href="" className={styles.link}><button className={styles.button}>Yes</button></Link>
+        <Button/>
       </main>
     </>
   )

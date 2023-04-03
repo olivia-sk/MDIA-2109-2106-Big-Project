@@ -17,7 +17,7 @@
 }
 
 .button:hover {
-  border: white;
+  border: black;
   color: white;
   background-color: rgb(147, 129, 255);
   cursor: pointer;
