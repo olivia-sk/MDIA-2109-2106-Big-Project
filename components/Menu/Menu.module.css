@@ -1,0 +1,67 @@
+.navigation {
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 312px;
+    height: 100%;
+    background-image: url("/Menu/background.png");
+    background-size: cover;
+    transition: 0.5s;
+    border-radius: 27px 0 0 27px;
+  }
+  
+  .navigation ul li {
+    display: flex;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 20px;
+    text-align: left;
+    font-weight: 500;
+    list-style-type: none;
+    font-size: 14px;
+    padding: 20px 30px;
+    border-bottom: 0px 64px 64px -32px rgba(41, 15, 0, 0.56);
+    transition: all 0.3s ease;
+  }
+  
+  .navigation ul li:hover {
+    padding: 16px 20px;
+    background-image: url("/Menu/hover.png");
+    background-size: cover;
+    border-radius: 12px;
+  }
+  
+  .menutitle {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    display: flex;
+    align-items: left;
+    color: rgba(255, 255, 255, 0.32);
+    margin: 1rem;
+  }
+
+  .hamburger,
+  .bar {
+    position: fixed;
+  }
+  
+  .hamburger {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    transform: translateY(-50%);
+    border: 0;
+    background: 0 0;
+  }
+  
+  .hamburger.hidden {
+    display: none; /* Hide the menu button */
+  }
+  
+  .navigation.active {
+    right: 0;
+    z-index: 1;
+  }
