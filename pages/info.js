@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Menu from '@/components/Menu'
+import Navigation from '@/components/Menu'
+import styles from '@/styles/Info.module.css'
+
 
 
 export default function Info() {
@@ -13,7 +15,7 @@ export default function Info() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-      <Menu/>
+      <Navigation/>
       </main>
     </>
   )

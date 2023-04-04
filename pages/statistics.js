@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Pie from '@/components/PieChart'
-import Menu from '@/components/Menu'
+import Navigation from '@/components/Menu'
 import styles from '@/styles/Statistics.module.css'
 
 
@@ -16,7 +16,7 @@ export default function Statistics() {
       </Head>
       <main className={styles.main}>
       <Pie />
-      <Menu/>
+      <Navigation/>
       </main>
     </>
   )

@@ -3,7 +3,7 @@ import styles from "./Menu.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-const Navigation = () => {
+export default function Navigation() {
   const hamburgerRef = useRef();
   const navigationRef = useRef();
 
@@ -60,6 +60,4 @@ const Navigation = () => {
       </div>
     </>
   );
-};
-
-export default Navigation;
+}
