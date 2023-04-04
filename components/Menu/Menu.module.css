@@ -1,69 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
 .navigation {
-  position: fixed;
-  top: 0;
-  right: -500px;
-  width: 280px;
-  height: 100%;
-  background-image: url("/Menu/background.png");
-  background-size: cover;
-  transition: 0.5s;
-  border-radius: 27px 0 0 27px;
-}
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 312px;
+    height: 100%;
+    background-image: url("/Menu/background.png");
+    background-size: cover;
+    transition: 0.5s;
+    border-radius: 27px 0 0 27px;
+  }
+  
+  .navigation ul li {
+    display: flex;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 20px;
+    text-align: left;
+    font-weight: 500;
+    list-style-type: none;
+    font-size: 14px;
+    padding: 20px 30px;
+    border-bottom: 0px 64px 64px -32px rgba(41, 15, 0, 0.56);
+    transition: all 0.3s ease;
+  }
+  
+  .navigation ul li:hover {
+    padding: 16px 20px;
+    background-image: url("/Menu/hover.png");
+    background-size: cover;
+    border-radius: 12px;
+  }
+  
+  .menutitle {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    display: flex;
+    align-items: left;
+    color: rgba(255, 255, 255, 0.32);
+    margin: 1rem;
+  }
 
-.menutitle {
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  display: flex;
-  align-items: left;
-  color: rgba(255, 255, 255, 0.50);
-  margin: 1.5rem;
-}
-
-.navigation ul li {
-  display: flex;
-  color: rgba(255, 255, 255, 0.5);
-  line-height: 20px;
-  text-align: left;
-  font-weight: 500;
-  list-style-type: none;
-  font-size: 14px;
-  padding: 20px 30px;
-  border-bottom: 0px 64px 64px -32px rgba(41, 15, 0, 100);
-  transition: all 0.3s ease;
-}
-
-.navigation ul li:hover {
-  padding: 16px 20px;
-  background-image: url("/Menu/hover.png");
-  background-size: cover;
-  border-radius: 12px;
-  cursor: pointer;
-}
-
-.hamburger,
-.bar {
-  position: fixed;
-}
-
-.hamburger {
-  display: flex;
-  top: 6%;
-  left: 80%;
-  transform: translateY(-50%);
-  border: 0;
-  background: 0 0;
-  margin-right: 10rem;
-}
-
-.hamburger.hidden {
-  display: none; /* Hide the menu button */
-}
-
-.navigation.active {
-  right: 0;
-  z-index: 1;
-}
+  .hamburger,
+  .bar {
+    position: fixed;
+  }
+  
+  .hamburger {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    transform: translateY(-50%);
+    border: 0;
+    background: 0 0;
+  }
+  
+  .hamburger.hidden {
+    display: none; /* Hide the menu button */
+  }
+  
+  .navigation.active {
+    right: 0;
+    z-index: 1;
+  }
