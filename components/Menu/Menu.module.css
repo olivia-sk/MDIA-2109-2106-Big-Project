@@ -60,7 +60,7 @@
 }
 
 .hamburger.hidden {
-  display: none; /* Hide the menu button */
+  display: none; 
 }
 
 .navigation.active {
