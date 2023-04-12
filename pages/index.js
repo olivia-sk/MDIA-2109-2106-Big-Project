@@ -21,7 +21,6 @@ export default function Home() {
         <Pie/>
         <Link href="" className={styles.link}><button className={styles.button}>Yes</button></Link>
         <Humphrey/>
-=======
       <Navigation/>
       </main>
     </>
