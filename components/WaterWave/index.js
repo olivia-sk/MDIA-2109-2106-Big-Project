@@ -1,4 +1,4 @@
-import styles from './WaterWave.module.css';
+import styles from './waterWave.module.css';
 
 export default function WaterWave() {
   return (
