@@ -5,6 +5,8 @@ import Pie from '@/components/PieChart'
 import Humphrey from '@/components/Humphrey'
 import Link from 'next/link'
 import Navigation from '@/components/Menu';
+import Button from '@/components/Button';
+
 
 
 export default function Home() {
@@ -19,7 +21,7 @@ export default function Home() {
       <main className={styles.main}>
       
         <Pie/>
-        <Link href="" className={styles.link}><button className={styles.button}>Yes</button></Link>
+        <Link href="" className={styles.link}><Button className={styles.button}>Yes</Button></Link>
         <Humphrey/>
       <Navigation/>
       </main>
