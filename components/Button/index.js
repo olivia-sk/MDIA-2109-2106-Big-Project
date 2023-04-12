@@ -1,12 +1,13 @@
-import React from 'react';
-import styles from '@/components/Button/Button.module.css'
+import React from "react";
+import styles from "./Button.module.css";
+import Link from "next/link";
 
-export default function App() {
+export default function Button() {
   return (
     <>
-    <div>
-    <Link href="" className={styles.link}><button className={styles.button}>Yes</button></Link>
-    </div>
+      <div className={styles.button}>
+        <Link href="/" className={styles.link}>Yes</Link>
+      </div>
     </>
-  )
+  );
 }
