@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import styles from "./Menu.module.css"
+import styles from "./Menu.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
