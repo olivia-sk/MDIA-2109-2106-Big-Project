@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 import Pie from '@/components/PieChart'
+import Button from '@/components/Button'
 import Humphrey from '@/components/Humphrey'
 import Link from 'next/link'
 
