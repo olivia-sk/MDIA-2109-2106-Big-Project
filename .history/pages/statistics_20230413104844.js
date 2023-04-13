@@ -15,14 +15,8 @@ export default function Statistics() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-      <h1 className={styles.title}>New Habits</h1>
+      <Pie />
       <Navigation/>
-        <div className={styles.box}>
-        <Pie className={styles.pie}/>
-        <h2>Substance Misuse Statistics</h2>
-        <p>According to a 2021 survey done by Statistics Canada, 66% of households claim to use Alcohol. It is believed 50% of those users may develop Substance Misuse Disorder (SUD)</p>
-        </div>
-        <Link href="" className={styles.link}><Button className={styles.button}>Yes</Button></Link>
       </main>
     </>
   )
