@@ -22,7 +22,7 @@ export default function Statistics() {
         <h2>Substance Misuse Statistics</h2>
         <p>According to a 2021 survey done by Statistics Canada, 66% of households claim to use Alcohol. It is believed 50% of those users may develop Substance Misuse Disorder (SUD)</p>
         </div>
-        <Link href="" className={styles.link}><Button className={styles.button}>Yes</Button></Link>
+        <Button/>
       </main>
     </>
   )
