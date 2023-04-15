@@ -1,7 +1,7 @@
-import React, { useRef } from 'react'
-import styles from './Menu.module.css'
-import Image from 'next/image'
-import Link from 'next/link'
+import React, { useRef } from "react";
+import styles from "./Menu.module.css";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Navigation() {
   const hamburgerRef = useRef();
@@ -38,7 +38,7 @@ export default function Navigation() {
           onClick={handleHamburgerClick}
           ref={hamburgerRef}
         >
-          <Image src="/Menu/burger.png" width={65} height={65} alt='burger menu'/>
+          <Image src="/Menu/burger.png" width={65} height={65} />
         </button>
         <nav>
           <h1 className={styles.menutitle}>Menu</h1>
@@ -47,13 +47,13 @@ export default function Navigation() {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/get_started5/get_started">Quiz</Link>
+              <Link href="/">Quiz</Link>
             </li>
             <li>
-              <Link href="/disclaimer11/disclaimer">Disclaimer</Link>
+              <Link href="/">Disclaimer</Link>
             </li>
             <li>
-              <Link href="/resources13/resources">Resources</Link>
+              <Link href="/">Resources</Link>
             </li>
           </ul>
         </nav>

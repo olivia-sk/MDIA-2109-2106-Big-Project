@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    background-color: tra;
 }
 
 .water_wave{
@@ -12,6 +13,7 @@
     box-shadow: insert 0 0 20px 0 rgba(0,0,0,0.8);
     position: relative;
     overflow: hidden;
+    bottom: 28rem;
 }
 
 .water_wave:after,
@@ -22,7 +24,7 @@
     height: 200%;
     top: -50%;
     left: 50%;
-    background:#ffffff;
+    background:#f9f9ff;
 }
 
 .water_wave:after{
