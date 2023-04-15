@@ -28,9 +28,7 @@ export default function Statistics() {
             <p>According to a 2021 survey done by Statistics Canada, 66% of households claim to use Alcohol. It is believed 50% of those users may develop Substance Misuse Disorder (SUD)</p>
           </div>
           <div class={styles.div2}>
-            <div className={styles.button}>
-              <Link href="/get_started5/get_started" className={styles.link}>Continue</Link>
-            </div>
+            <WaterWave className={styles.wave} />
           </div>
       </main>
     </>

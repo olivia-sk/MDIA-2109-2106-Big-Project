@@ -29,7 +29,7 @@ export default function Statistics() {
           </div>
           <div class={styles.div2}>
             <div className={styles.button}>
-              <Link href="/get_started5/get_started" className={styles.link}>Continue</Link>
+              <Link href="/" className={styles.link}>Continue</Link>
             </div>
           </div>
       </main>

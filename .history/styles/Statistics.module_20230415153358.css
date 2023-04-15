@@ -14,54 +14,38 @@
   padding: 10%;
 }
 .title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-title);
-  font-size: var(--title-size);
-  /** This is the line that makes the text gradient */
-  background-image: var(--radial-text);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  /**/
-  font-weight: 500;
+  color: black;
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
   text-align: center;
 }
 .div1 {
   grid-area: 2 / 2 / 3 / 3;
-  height: fit-content;
+  height: 40rem;
   border: solid 10px rgba(255, 218, 185, 1);
 }
 .div1 h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-text);
-  font-size: var(--subtitle-size);
-  /** This is the line that makes the text gradient */
-  background-image: var(--radial-text);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  /**/
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 27px;
   text-align: center;
-  font-weight: 400;
+  color: black;
   padding: 5%;
 
 }
 .div1 p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-text);
-  font-size: 18px;
-  background-image: var(--radial-text);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-align: center;
+  font-family: 'Comfortaa';
+  font-style: normal;
   font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+  color: black;
   padding: 5%;
 }
 .div2 {
