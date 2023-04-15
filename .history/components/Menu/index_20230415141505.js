@@ -44,7 +44,7 @@ export default function Navigation() {
           <h1 className={styles.menutitle}>Menu</h1>
           <ul>
             <li>
-              <Link href="/home1/home">Home</Link>
+              <Link href="/index">Home</Link>
             </li>
             <li>
               <Link href="/get_started5/get_started">Quiz</Link>

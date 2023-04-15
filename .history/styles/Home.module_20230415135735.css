@@ -9,7 +9,7 @@
 }
 
 .div3 {
-  grid-area:  1 / 2 / 2 / 3;
+  grid-area: 3 / 1 / 4 / 4;
   height: 5rem;
   border: solid 10px rgba(255, 218, 185, 1);
 }
@@ -47,7 +47,7 @@
   color: black;
 }
 .div2 {
-  grid-area: 3 / 1 / 4 / 4;
+  grid-area: 1 / 2 / 2 / 3;
   border: solid 10px rgba(255, 218, 185, 1);
 }
 
