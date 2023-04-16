@@ -130,7 +130,7 @@
   
     .description {
       font-size: calc(var(--subtitle-size) * 0.4);
-      width: 70%;
+      width: 100%;
     }
   
     .button {
