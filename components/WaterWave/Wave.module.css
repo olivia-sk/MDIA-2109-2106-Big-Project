@@ -1,9 +1,8 @@
 .container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: baseline;
     min-height: 100vh;
-    background-color: tra;
 }
 
 .water_wave{
@@ -13,7 +12,7 @@
     box-shadow: insert 0 0 20px 0 rgba(0,0,0,0.8);
     position: relative;
     overflow: hidden;
-    bottom: 28rem;
+    bottom: 24rem;
 }
 
 .water_wave:after,

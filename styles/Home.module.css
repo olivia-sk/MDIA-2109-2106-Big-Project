@@ -1,3 +1,4 @@
+/* Default styles for all screen sizes */
 .main {
   display: flex;
   flex-direction: column;
@@ -11,10 +12,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5rem 5rem 0rem 5rem;
-  z-index: 1;
-
+  padding-top: 5rem !important; 
 }
+
 
 .title {
   display: flex;
@@ -22,23 +22,22 @@
   justify-content: center;
   font-family: var(--font-title);
   font-size: var(--title-size);
-  /** This is the line that makes the text gradient */
   background-image: var(--radial-text);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  /**/
   font-weight: 500;
   text-align: center;
   margin: 0.5rem;
-  max-width: 214px;
+  width: 30rem;
 }
 
 .image_container {
   margin: 2rem;
   z-index: 2;
-
 }
+
+
 
 .subtitle {
   display: flex;
@@ -46,12 +45,10 @@
   justify-content: center;
   font-family: var(--font-text);
   font-size: var(--subtitle-size);
-  /** This is the line that makes the text gradient */
   background-image: var(--radial-text);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  /**/
   text-align: center;
   font-weight: 400;
   margin: 0.5rem;
@@ -63,17 +60,14 @@
   justify-content: center;
   font-family: var(--font-text);
   font-size: var(--body-size);
-  /** This is the line that makes the text gradient */
   background-image: var(--radial-text);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  /**/
   font-weight: 400;
   text-align: center;
-  width: 328px;
+  width: 30rem;
   margin: 0.5rem;
-
 }
 
 .button {
@@ -90,7 +84,14 @@
   font-family: "Montserrat", sans-serif;
   margin-top: 2rem;
   z-index: 2;
+}
 
+.wave_container {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .link {
@@ -111,13 +112,40 @@
 }
 
 .button:hover .link {
-  color: white; /* This line makes the link text turn white when hovering the button */
+  color: white;
 }
 
-
-/** mobile styles */
+/* Media queries for screen sizes below 414px (iPhone 11 and smaller) */
 @media (max-width: 414px) {
   .main {
-  max-height: 896px;
+    min-height: auto;
   }
+
+  .container {
+    padding: 2rem;
   }
+
+  .title {
+    max-width: 50%;
+    font-size: 2rem;
+    z-index: 2;
+  }
+
+  .subtitle {
+    max-width: 50%;
+    font-size: 1.5rem;
+    z-index: 2;
+  }
+
+  .description {
+    width: 60%;
+    z-index: 2;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 130px;
+    height: 45px;
+    margin-top: 0.5rem;
+  }
+}

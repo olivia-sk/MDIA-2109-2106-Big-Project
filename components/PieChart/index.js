@@ -31,7 +31,7 @@ export const data = {
 export default function App() {
   return (
     <div className={styles.pie}>
-        <Pie data={data} />
+        <Pie data={data} maintainAspectRatio={false}/>
     </div>
   )
 }

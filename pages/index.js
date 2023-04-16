@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>New Habits Web App</title>
+        <title>New Habits Web App | Home</title>
         <meta
           name="description"
           content="To identify and help those who suffer from Substance Misuse"
@@ -19,7 +19,6 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Navigation />
-
         <div className={styles.container}>
           <h2 className={styles.subtitle}>Welcome To</h2>
           <h1 className={styles.title}>New Habits Web App</h1>
@@ -28,17 +27,19 @@ export default function Home() {
           </p>
           <Image
             className={styles.image_container}
-            src="/graphics/flowerwhale.png"
+            src="/graphics/Flower Whale.png"
             alt="whale holding a flower"
             width={192}
             height={122}
           />
           <div className={styles.button}>
-            <Link href="/info" className={styles.link}>
+            <Link href="/info2/info" className={styles.link}>
               Let's Start
             </Link>
           </div>
-          <WaterWave />
+          <div className={styles.wave_container}>
+            <WaterWave />
+          </div>
         </div>
       </main>
     </>
