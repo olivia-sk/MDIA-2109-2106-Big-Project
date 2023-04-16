@@ -47,13 +47,13 @@ export default function Navigation() {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/">Quiz</Link>
+              <Link href="/get_started5/get_started">Quiz</Link>
             </li>
             <li>
-              <Link href="/">Disclaimer</Link>
+              <Link href="/disclaimer11/disclaimer">Disclaimer</Link>
             </li>
             <li>
-              <Link href="/">Resources</Link>
+              <Link href="/resources13/resources">Resources</Link>
             </li>
           </ul>
         </nav>

@@ -28,7 +28,7 @@ export default function Home() {
           </p>
           <Image
             className={styles.image_container}
-            src="/graphics/flowerwhale.png"
+            src="/Graphics/flowerwhale.png"
             alt="whale holding a flower"
             width={192}
             height={122}
