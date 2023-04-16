@@ -24,6 +24,12 @@
   margin: 1.5rem;
 }
 
+.ul {
+  color: rgba(255, 255, 255, 0.5) !important;
+  text-decoration: none;
+}
+
+
 .navigation ul li {
   display: flex;
   color: rgba(255, 255, 255, 0.5);

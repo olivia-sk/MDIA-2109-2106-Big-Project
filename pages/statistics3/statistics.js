@@ -4,8 +4,7 @@ import styles from "@/styles/Statistics.module.css";
 import Pie from "@/components/PieChart";
 import Link from "next/link";
 import Navigation from "@/components/Menu";
-import Button from "@/components/Button";
-import WaterWave from "@/components/WaterWave";
+
 
 
 export default function Statistics() {
@@ -17,6 +16,7 @@ export default function Statistics() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Navigation />
       <main className={styles.parent}>
           <div class={styles.div3}>
           <h1 className={styles.title}>New Habits</h1>
@@ -32,7 +32,7 @@ export default function Statistics() {
         </div>
         <div class={styles.div2}>
           <div className={styles.button}>
-            <Link href="/get_started5/get_started" className={styles.link}>
+            <Link href="/humphrey_intro4/intro" className={styles.link}>
               Continue
             </Link>
           </div>

@@ -44,16 +44,16 @@ export default function Navigation() {
           <h1 className={styles.menutitle}>Menu</h1>
           <ul>
           <li>
-              <Link href="/">Home</Link>
+              <Link href="/" className={styles.ul}>Home</Link>
             </li>
             <li>
-              <Link href="/get_started5/get_started">Quiz</Link>
+              <Link href="/get_started5/get_started" className={styles.ul}>Quiz</Link>
             </li>
             <li>
-              <Link href="/disclaimer11/disclaimer">Disclaimer</Link>
+              <Link href="/disclaimer11/disclaimer" className={styles.ul}>Disclaimer</Link>
             </li>
             <li>
-              <Link href="/resources13/resources">Resources</Link>
+              <Link href="/resources13/resources"className={styles.ul}>Resources</Link>
             </li>
           </ul>
         </nav>
