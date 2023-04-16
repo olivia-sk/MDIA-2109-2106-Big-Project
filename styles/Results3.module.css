@@ -3,7 +3,9 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    min-height: 100vh;
+    max-height: 175vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
   
   .container {
@@ -32,25 +34,31 @@
   .content_container {
     padding: 1rem;
     background: var(--cream);
-    border: var(--border-radius) solid var(--peach);
+    border: var(--border-radius) solid var(--red);
     border-radius: var(--corner-radius);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     z-index: 1;
+    margin: 1rem;
   }
   
+  .image_container {
+    margin: 2rem;
+    z-index: 2;
+  }
+
   .subtitle {
     text-align: center;
     font-family: var(--font-subtitle);
-    font-size: var(--subtitle-size);
+    font-size: 24px;
     background-image: var(--radial-text);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     font-weight: 500;
-    width: 60vw;
+    width: 55vw;
     margin: 1rem;
   }
   
@@ -62,7 +70,7 @@
     background-clip: text;
     color: transparent;
     font-weight: 400;
-    width: 60vw;
+    width: 55vw;
     margin: 1rem;
   }
   
@@ -79,14 +87,14 @@
     align-items: center;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-    margin: 2rem;
+    margin: 1rem;
     z-index: 1;
   
   }
   
   .wave {
     position: relative;
-    bottom: 8em;
+    bottom: 5rem;
   }
   
   .link {
@@ -115,22 +123,30 @@
   @media (max-width: 375px) {
     .title {
       font-size: calc(var(--title-size) * 0.7);
-      width: 35%;
+      width: 40%;
     }
   
     .content_container {
       width: 55%;
     }
   
+    @media (max-width: 375px) and (max-height: 667px) {
+      .content_container img {
+        width: 100px !important;
+        height: auto !important;
+        margin: 0.5rem;
+      }
+    }
+  
     .subtitle {
       font-size: calc(var(--subtitle-size) * 0.6);
-      width: 70%;
+      width: 80%;
       margin: 0.05rem;
     }
   
     .description {
-      font-size: calc(var(--subtitle-size) * 0.4);
-      width: 70%;
+      font-size: calc(var(--subtitle-size) * 0.5);
+      width: 80%;
     }
   
     .button {
@@ -141,6 +157,8 @@
   
     .wave {
       bottom: 0em;
+      
     }
+      
   }
   
