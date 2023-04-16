@@ -32,8 +32,8 @@ export default function Home() {
           </div>
 
           <div className={styles.button}>
-            <Link href="/resources13/resources" className={styles.link}>
-              Resources
+            <Link href="/statistics3/statistics" className={styles.link}>
+              Continue
             </Link>
           </div>
           <div className={styles.wave}>

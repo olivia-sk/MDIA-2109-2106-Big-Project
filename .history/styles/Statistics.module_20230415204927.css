@@ -29,6 +29,10 @@
   text-align: center;
   
 }
+.pie {
+  display: flex;
+  justify-content: center;
+}
 .div1 {
   grid-area: 2 / 2 / 3 / 3;
   height: fit-content;

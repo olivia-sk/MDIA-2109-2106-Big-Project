@@ -11,7 +11,6 @@
   grid-area:  1 / 2 / 2 / 3;
   height: 5rem;
   padding: 10%;
-  width: 18rem;
 }
 .title {
   display: flex;
@@ -27,12 +26,11 @@
   /**/
   font-weight: 500;
   text-align: center;
-  
+  width: 15rem;
 }
 .div1 {
   grid-area: 2 / 2 / 3 / 3;
   height: fit-content;
-  justify-content: center;
   border: solid 10px rgba(255, 218, 185, 1);
 }
 .div1 h2 {
