@@ -1,7 +1,10 @@
-import Head from 'next/head'
+import Head from "next/head";
 import styles from "@/styles/Question2.module.css";
-import Navigation from '@/components/Menu'
-import ProgressBar from '@/components/progressbar'
+import Navigation from "@/components/Menu";
+import ProgressBar from "@/components/progressbar";
+import Link from "next/link";
+import Image from "next/image";
+import WaterWave from "@/components/WaterWave";
 
 export default function QuestionTwo() {
   const currentStep = 2;
@@ -18,9 +21,51 @@ export default function QuestionTwo() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.parent}>
+      <main className={styles.main}>
         <Navigation />
-        <ProgressBar currentStep={currentStep} totalSteps={totalSteps} />
+        <div className={styles.container}>
+          <h1 className={styles.title}>New Habits</h1>
+          <div className={styles.progress}>
+            <ProgressBar currentStep={currentStep} totalSteps={totalSteps} />
+          </div>
+          <div className={styles.content_container}>
+            <p className={styles.description}>
+              Has a decline in physical and/or mental health been noticed?
+            </p>
+            <div className={styles.button}>
+              <Link href="#" className={styles.link}>
+                Yes
+              </Link>
+            </div>
+            <div className={styles.button}>
+              <Link href="#" className={styles.link}>
+                No
+              </Link>
+            </div>
+            <div className={styles.image_container}>
+              <Image
+                src="/Graphics/BigCoral3.png"
+                alt="whale holding a flower"
+                width={75}
+                height={68}
+              />
+              <Image
+                src="/Graphics/BigCoral3.png"
+                alt="whale holding a flower"
+                width={75}
+                height={68}
+              />
+            </div>
+          </div>
+          <div className={styles.buttonNext}>
+            <Link href="/question3_8/questionthree" className={styles.link}>
+              Next Question
+            </Link>
+          </div>
+          <div className={styles.wave}>
+            <WaterWave />
+          </div>
+        </div>
       </main>
     </>
   );

@@ -1,19 +1,19 @@
 import Head from "next/head";
-import styles from "@/styles/Question3.module.css";
+import styles from "@/styles/Question4.module.css";
 import Navigation from "@/components/Menu";
 import ProgressBar from "@/components/progressbar";
 import Link from "next/link";
 import Image from "next/image";
 import WaterWave from "@/components/WaterWave";
 
-export default function QuestionThree() {
-  const currentStep = 3;
+export default function QuestionFour() {
+  const currentStep = 4;
   const totalSteps = 4;
 
   return (
     <>
       <Head>
-        <title>New Habits Web App | Question Three</title>
+        <title>New Habits Web App | Question Four</title>
         <meta
           name="description"
           content="To identify and help those who suffer from Substance Misuse"
@@ -30,16 +30,21 @@ export default function QuestionThree() {
           </div>
           <div className={styles.content_container}>
             <p className={styles.description}>
-              Any noticeable financial troubles?
+              How could the substance misuse severity be scaled?
             </p>
             <div className={styles.button}>
               <Link href="#" className={styles.link}>
-                Yes
+                Mild
               </Link>
             </div>
             <div className={styles.button}>
               <Link href="#" className={styles.link}>
-                No
+              Moderate
+              </Link>
+            </div>
+            <div className={styles.button}>
+              <Link href="#" className={styles.link}>
+              Severe
               </Link>
             </div>
             <div className={styles.image_container}>
@@ -58,8 +63,8 @@ export default function QuestionThree() {
             </div>
           </div>
           <div className={styles.buttonNext}>
-            <Link href="/question4_9/questionfour" className={styles.link}>
-              Next Question
+            <Link href="/" className={styles.link}>
+              Finish
             </Link>
           </div>
           <div className={styles.wave}>
