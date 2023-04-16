@@ -7,11 +7,11 @@ import Navigation from "@/components/Menu";
 import Button from "@/components/Button";
 import WaterWave from "@/components/WaterWave";
 
-export default function Home() {
+export default function Resources() {
   return (
     <>
       <Head>
-        <title>New Habits Web App</title>
+        <title>New Habits Web App | Resources</title>
         <meta
           name="description"
           content="To identify and help those who suffer from Substance Misuse"
