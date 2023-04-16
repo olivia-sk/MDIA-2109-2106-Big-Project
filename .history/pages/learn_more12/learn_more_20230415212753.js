@@ -7,7 +7,7 @@ import Navigation from "@/components/Menu";
 import Button from "@/components/Button";
 import WaterWave from "@/components/WaterWave";
 
-export default function Learnmore() {
+export default function Home() {
   return (
     <>
       <Head>
@@ -32,8 +32,8 @@ export default function Learnmore() {
           </div>
 
           <div className={styles.button}>
-            <Link href="/resources13/resources" className={styles.link}>
-              Resources
+            <Link href="/statistics3/statistics" className={styles.link}>
+              Continue
             </Link>
           </div>
           <div className={styles.wave}>

@@ -7,22 +7,26 @@ import Navigation from "@/components/Menu";
 import Button from "@/components/Button";
 import WaterWave from "@/components/WaterWave";
 
-
 export default function Statistics() {
   return (
     <>
       <Head>
         <title>New Habits Web App</title>
-        <meta name="description" content="To identify and help those who suffer from Substance Misuse" />
+        <meta
+          name="description"
+          content="To identify and help those who suffer from Substance Misuse"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main className={styles.parent}>
-          <div class={styles.div3}>
+          <Navigation />
+        <div class={styles.div3}>
           <h1 className={styles.title}>New Habits</h1>
         </div>
         <div className={styles.div1}>
-          <Pie />
+          <Pie className={styles.pie}/>
           <h2>Substance Misuse Statistics</h2>
           <p>
             According to a 2021 survey done by Statistics Canada, 66% of
@@ -36,8 +40,8 @@ export default function Statistics() {
               Continue
             </Link>
           </div>
-          </div>
+        </div>
       </main>
     </>
-  )
+  );
 }

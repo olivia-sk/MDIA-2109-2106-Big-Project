@@ -7,7 +7,7 @@ import Navigation from "@/components/Menu";
 import Button from "@/components/Button";
 import WaterWave from "@/components/WaterWave";
 
-export default function Learnmore() {
+export default function Home() {
   return (
     <>
       <Head>
@@ -25,15 +25,18 @@ export default function Learnmore() {
           <h1 className={styles.title}>New Habits</h1>
 
           <div className={styles.content_container}>
-            <h2 className={styles.subtitle}>Learn More</h2>
+            <h2 className={styles.subtitle}>What defines substance misuse?</h2>
             <p className={styles.description}>
-            If you're looking to learn more about substance misuse disorder (SUD), there are several important topics you may want to explore. For instance, you could delve into the science of substance misuse, including how drugs affect the brain and how addiction can develop over time. You might also want to explore the different types of drugs and their effects, as well as the signs and symptoms of substance misuse disorder (SUD). 
+              Substance misuse, more commonly known as drug addiction, is the
+              misuse of illegal drugs, or inappropriate use of legal drugs.
+              Substance misuse affects the user and their family on every level:
+              emotional, psychological, financial, and social
             </p>
           </div>
 
           <div className={styles.button}>
-            <Link href="/resources13/resources" className={styles.link}>
-              Resources
+            <Link href="/statistics3/statistics" className={styles.link}>
+              Continue
             </Link>
           </div>
           <div className={styles.wave}>

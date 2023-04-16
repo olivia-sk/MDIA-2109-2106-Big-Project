@@ -7,7 +7,7 @@ import Navigation from "@/components/Menu";
 import Button from "@/components/Button";
 import WaterWave from "@/components/WaterWave";
 
-export default function Learnmore() {
+export default function Home() {
   return (
     <>
       <Head>

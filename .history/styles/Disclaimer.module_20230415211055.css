@@ -1,72 +1,89 @@
-.main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100vh;
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100vh;
   }
   
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .div3 {
+    grid-area:  1 / 2 / 2 / 3;
+    height: 5rem;
+    padding: 10%;
+    width: 18rem;
   }
-  
   .title {
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--font-title);
     font-size: var(--title-size);
+    /** This is the line that makes the text gradient */
     background-image: var(--radial-text);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    /**/
     font-weight: 500;
     text-align: center;
-    margin: 1.5rem;
-    width: 30rem;
+    
   }
-  
-  .content_container {
-    padding: 1rem;
-    background: var(--cream);
-    border: var(--border-radius) solid var(--peach);
-    border-radius: var(--corner-radius);
+  .div1 {
+    grid-area: 2 / 2 / 3 / 3;
+    height: fit-content;
+    justify-content: center;
+    border: solid 10px rgba(255, 218, 185, 1);
+  }
+  .div1 h2 {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    z-index: 1;
-  }
-  
-  .subtitle {
-    text-align: center;
-    font-family: var(--font-subtitle);
+    justify-content: center;
+    font-family: var(--font-text);
     font-size: var(--subtitle-size);
+    /** This is the line that makes the text gradient */
     background-image: var(--radial-text);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-weight: 500;
-    width: 60vw;
-    margin: 1rem;
-  }
-  
-  .description {
+    /**/
     text-align: center;
-    font-family: var(--font-subtitle);
+    font-weight: 400;
+    padding: 5%;
+  
+  }
+  .div1 p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-text);
+    font-size: 18px;
     background-image: var(--radial-text);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    text-align: center;
     font-weight: 400;
-    width: 60vw;
-    margin: 1rem;
+    padding: 5%;
+  }
+  .div2 {
+    grid-area: 3 / 1 / 4 / 4;
+    display: flex;
+    justify-content: center;
+  }
+  .wave {
+    padding-bottom: 0%;
+  }
+  .wave_container {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0%;
   }
   
-  /** Button */
+  /*Button*/
   .button {
     display: flex;
     color: rgb(147, 129, 255);
@@ -79,14 +96,6 @@
     align-items: center;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-    margin: 2rem;
-    z-index: 1;
-  
-  }
-  
-  .wave {
-    position: relative;
-    bottom: 8em;
   }
   
   .link {
@@ -111,36 +120,5 @@
     color: white; /* This line makes the link text turn white when hovering the button */
   }
   
-  /* Responsive styles */
-  @media (max-width: 375px) {
-    .title {
-      font-size: calc(var(--title-size) * 0.7);
-      width: 35%;
-    }
   
-    .content_container {
-      width: 55%;
-    }
-  
-    .subtitle {
-      font-size: calc(var(--subtitle-size) * 0.6);
-      width: 70%;
-      margin: 0.05rem;
-    }
-  
-    .description {
-      font-size: calc(var(--subtitle-size) * 0.4);
-      width: 70%;
-    }
-  
-    .button {
-      width: 100px;
-      height: 35px;
-      font-size: 0.8em;
-    }
-  
-    .wave {
-      bottom: 0em;
-    }
-  }
   

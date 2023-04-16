@@ -32,7 +32,6 @@
 .div1 {
   grid-area: 2 / 2 / 3 / 3;
   height: fit-content;
-  justify-content: center;
   border: solid 10px rgba(255, 218, 185, 1);
 }
 .div1 h2 {
