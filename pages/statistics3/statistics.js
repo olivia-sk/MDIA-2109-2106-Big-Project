@@ -36,7 +36,7 @@ export default function Statistics() {
         </div>
         <div class={styles.div2}>
           <div className={styles.button}>
-            <Link href="/get_started5/get_started" className={styles.link}>
+            <Link href="/humphrey_intro4/intro" className={styles.link}>
               Continue
             </Link>
           </div>
