@@ -1,17 +1,16 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "@/styles/Home.module.css";
-import Pie from "@/components/PieChart";
-import Link from "next/link";
-import Navigation from "@/components/Menu";
-import Button from "@/components/Button";
-import WaterWave from "@/components/WaterWave";
+import Head from 'next/head'
+import styles from "@/styles/Question2.module.css";
+import Navigation from '@/components/Menu'
+import ProgressBar from '@/components/progressbar'
 
-export default function Questiontwo() {
+export default function QuestionTwo() {
+  const currentStep = 2;
+  const totalSteps = 4;
+
   return (
     <>
       <Head>
-        <title>New Habits Web App</title>
+        <title>New Habits Web App | Question Two</title>
         <meta
           name="description"
           content="To identify and help those who suffer from Substance Misuse"
@@ -20,8 +19,8 @@ export default function Questiontwo() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.parent}>
-          <Navigation/>
-            <WaterWave/>
+        <Navigation />
+        <ProgressBar currentStep={currentStep} totalSteps={totalSteps} />
       </main>
     </>
   );

@@ -1,0 +1,31 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.progressBar {
+  display: flex;
+  width: 260px;
+  height: 10px;
+  background-color: transparent;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.progressStep {
+  height: 10px;
+  width: 62px;
+  background-color: var(--light-purple);
+  transition: background-color 0.5s;
+  border-radius: 8px;
+  margin-right: 4px; 
+}
+
+.progressStep:last-child {
+  margin-right: 0; 
+}
+
+.completed {
+  background-color: var(--main-purple);
+}
