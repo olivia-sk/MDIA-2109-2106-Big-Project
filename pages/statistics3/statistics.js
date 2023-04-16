@@ -36,6 +36,7 @@ export default function Statistics() {
               Continue
             </Link>
           </div>
+          </div>
       </main>
     </>
   )
