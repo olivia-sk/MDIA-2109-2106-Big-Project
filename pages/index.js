@@ -4,6 +4,7 @@ import styles from "@/styles/Home.module.css";
 import Navigation from "@/components/Menu";
 import WaterWave from "@/components/WaterWave";
 import Link from "next/link";
+import HumphreyFloat from "@/components/HumphreyFloat";
 
 export default function Home() {
   return (
@@ -25,13 +26,9 @@ export default function Home() {
           <p className={styles.description}>
             To identify and help those who suffer from Substance Misuse
           </p>
-          <Image
-            className={styles.image_container}
-            src="/Graphics/flowerwhale.png"
-            alt="whale holding a flower"
-            width={192}
-            height={122}
-          />
+          <div className={styles.image_container}>
+            <HumphreyFloat />
+          </div>
           <div className={styles.button}>
             <Link href="/info2/info" className={styles.link}>
               Let's Start
