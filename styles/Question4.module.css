@@ -87,7 +87,7 @@
     background: transparent;
     border: solid 2px rgb(147, 129, 255);
     width: 140px;
-    height: 45px;
+    height: 40px;
     border-radius: 100px;
     justify-content: center;
     align-items: center;
@@ -155,23 +155,23 @@
   
     .content_container {
       width: 60%;
-      height: 55vh;
+      height: 60vh !important;
     }
   
     .image_container{
       position: relative;
-      bottom: -15px;
+      bottom: -20px;
       gap: 7rem;
     }
   
     .subtitle {
-      font-size: calc(var(--subtitle-size) * 0.6);
+      font-size: calc(var(--subtitle-size) * 0.4);
       width: 80%;
       margin: 0.05rem;
     }
   
     .description {
-      font-size: calc(var(--subtitle-size) * 0.4);
+      font-size: calc(var(--subtitle-size) * 0.3);
       width: 80%;
     }
   
@@ -179,7 +179,7 @@
         width: 120px;
         height: 80px;
         font-size: 0.8em;
-        margin: 0.5rem !important;
+        margin: 0rem !important;
       }
 
       .buttonNext {
