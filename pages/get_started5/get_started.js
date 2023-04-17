@@ -41,7 +41,7 @@ export default function Getstarted() {
             </p>
             <div className={styles.button}>
               <Link href="/question1_6/questionone" className={styles.link}>
-                Let's Go!
+                Start Quiz
               </Link>
             </div>
           </div>

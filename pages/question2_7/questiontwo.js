@@ -5,11 +5,16 @@ import ProgressBar from "@/components/progressbar";
 import Link from "next/link";
 import Image from "next/image";
 import WaterWave from "@/components/WaterWave";
+import { useState } from "react";
 
 export default function QuestionTwo() {
   const currentStep = 2;
   const totalSteps = 4;
+  const [answers, setAnswers] = useState({});
 
+  const handleAnswer = (answer) => {
+    setAnswers({ ...answers, question1: answer });
+  };
   return (
     <>
       <Head>
@@ -33,12 +38,12 @@ export default function QuestionTwo() {
               Has a decline in physical and/or mental health been noticed?
             </p>
             <div className={styles.button}>
-              <Link href="#" className={styles.link}>
+              <Link href="" onClick={() => handleAnswer("yes")} className={styles.link}>
                 Yes
               </Link>
             </div>
             <div className={styles.button}>
-              <Link href="#" className={styles.link}>
+              <Link href="" onClick={() => handleAnswer("no")} className={styles.link}>
                 No
               </Link>
             </div>
@@ -58,7 +63,7 @@ export default function QuestionTwo() {
             </div>
           </div>
           <div className={styles.buttonNext}>
-            <Link href="/question3_8/questionthree" className={styles.link}>
+            <Link href={{ pathname: "/question3_8/questionthree", query: { answers: JSON.stringify(answers) }}} className={styles.link}>
               Next Question
             </Link>
           </div>

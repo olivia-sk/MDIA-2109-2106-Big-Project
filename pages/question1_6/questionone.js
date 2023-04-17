@@ -5,11 +5,17 @@ import ProgressBar from '@/components/progressbar'
 import Link from 'next/link';
 import Image from 'next/image';
 import WaterWave from '@/components/WaterWave';
+import { useState } from "react";
+
 
 export default function QuestionOne() {
   const currentStep = 1;
   const totalSteps = 4;
+  const [answers, setAnswers] = useState({});
 
+  const handleAnswer = (answer) => {
+    setAnswers({ ...answers, question1: answer });
+  };
   return (
     <>
       <Head>
@@ -34,25 +40,25 @@ export default function QuestionOne() {
               friends and family relationships?
             </p>
             <div className={styles.button}>
-              <Link href="#" className={styles.link}>
+              <Link href="" onClick={() => handleAnswer("yes")} className={styles.link}>
                 Yes
               </Link>
             </div>
             <div className={styles.button}>
-              <Link href="#" className={styles.link}>
+              <Link href="" onClick={() => handleAnswer("no")} className={styles.link}>
                 No
               </Link>
             </div>
             <div className={styles.image_container}>
               <Image
                 src="/Graphics/BigCoral3.png"
-                alt="whale holding a flower"
+                alt="coral"
                 width={75}
                 height={68}
               />
               <Image
                 src="/Graphics/BigCoral3.png"
-                alt="whale holding a flower"
+                alt="coral"
                 width={75}
                 height={68}
               />
@@ -60,7 +66,7 @@ export default function QuestionOne() {
 
           </div>
           <div className={styles.buttonNext}>
-            <Link href="/question2_7/questiontwo" className={styles.link}>
+            <Link href={{ pathname: "/question2_7/questiontwo", query: { answers: JSON.stringify(answers) }}} className={styles.link}>
               Next Question
             </Link>
           </div>
