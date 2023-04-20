@@ -96,37 +96,45 @@
     margin: 1rem;
     z-index: 1;
 }
-.buttonNext {
-    display: flex;
-    color: rgb(147, 129, 255);
-    background: transparent;
-    border: solid 2px rgb(147, 129, 255);
-    width: 140px;
-    height: 45px;
-    border-radius: 100px;
-    justify-content: center;
-    align-items: center;
-    font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
-    margin: 2rem;
-    z-index: 1;
-}
+
 
 .wave {
     position: relative;
     bottom: 7em;
 }
 
-.link {
+.buttonNext {
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    margin: 2rem;
+    z-index: 1;
     text-decoration: none;
-    color: rgb(147, 129, 255);
-    display: flex;
+  }
+
+.link {
+  text-decoration: none;
+  color: rgb(147, 129, 255);
+  display: flex;
+  background: transparent;
+  border: solid 2px rgb(147, 129, 255);
+  width: 140px;
+  height: 45px;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  margin: 2rem;
+  z-index: 1;
 }
 
-.link:hover {
-    color: white;
-
-}
+.link:active {
+    background: var(--main-purple);
+    border-color: var(--creme);
+    color: var(--creme);
+  }
 
 .button:hover {
     border: white;
@@ -134,12 +142,7 @@
     background-color: rgb(147, 129, 255);
     cursor: pointer;
 }
-.buttonNext:hover {
-    border: white;
-    color: white;
-    background-color: rgb(147, 129, 255);
-    cursor: pointer;
-}
+
 
 .button:hover .link {
     color: white;

@@ -1,21 +1,30 @@
-import Head from 'next/head'
+import Head from "next/head";
 import styles from "@/styles/Question1.module.css";
-import Navigation from '@/components/Menu'
-import ProgressBar from '@/components/progressbar'
-import Link from 'next/link';
-import Image from 'next/image';
-import WaterWave from '@/components/WaterWave';
+import Navigation from "@/components/Menu";
+import ProgressBar from "@/components/progressbar";
+import Image from "next/image";
+import WaterWave from "@/components/WaterWave";
+import { useRouter } from "next/router";
 import { useState } from "react";
-
 
 export default function QuestionOne() {
   const currentStep = 1;
   const totalSteps = 4;
-  const [answers, setAnswers] = useState({});
 
-  const handleAnswer = (answer) => {
-    setAnswers({ ...answers, question1: answer });
+  const [score, setScore] = useState(0);
+  const [userAnswer, setUserAnswer] = useState(null);
+  const router = useRouter();
+
+  const handleAnswer = (newScore) => {
+    setUserAnswer(newScore);
   };
+
+  const handleNextQuestion = () => {
+    if (userAnswer !== null) {
+      router.push(`/question2_7/questiontwo?score=${score + userAnswer}`);
+    }
+  };
+
   return (
     <>
       <Head>
@@ -36,18 +45,24 @@ export default function QuestionOne() {
           </div>
           <div className={styles.content_container}>
             <p className={styles.description}>
-              Has the substance misuse affected
-              friends and family relationships?
+              Has the substance misuse affected friends and family
+              relationships?
             </p>
-            <div className={styles.button}>
-              <Link href="" onClick={() => handleAnswer("yes")} className={styles.link}>
+            <div>
+              <button
+                className={styles.button}
+                onClick={() => handleAnswer(1)}
+              >
                 Yes
-              </Link>
+              </button>
             </div>
-            <div className={styles.button}>
-              <Link href="" onClick={() => handleAnswer("no")} className={styles.link}>
+            <div>
+              <button
+                className={styles.button}
+                onClick={() => handleAnswer(0)}
+              >
                 No
-              </Link>
+              </button>
             </div>
             <div className={styles.image_container}>
               <Image
@@ -63,13 +78,13 @@ export default function QuestionOne() {
                 height={68}
               />
             </div>
-
           </div>
           <div className={styles.buttonNext}>
-            <Link href={{ pathname: "/question2_7/questiontwo", query: { answers: JSON.stringify(answers) }}} className={styles.link}>
-              Next Question
-            </Link>
-          </div>
+  <button type="button" onClick={handleNextQuestion} className={styles.link}>
+    Next Question
+  </button>
+</div>
+
           <div className={styles.wave}>
             <WaterWave />
           </div>
@@ -78,4 +93,3 @@ export default function QuestionOne() {
     </>
   );
 }
-

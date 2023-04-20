@@ -2,19 +2,34 @@ import Head from "next/head";
 import styles from "@/styles/Question3.module.css";
 import Navigation from "@/components/Menu";
 import ProgressBar from "@/components/progressbar";
-import Link from "next/link";
 import Image from "next/image";
 import WaterWave from "@/components/WaterWave";
-import { useState } from "react";
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
 
 export default function QuestionThree() {
   const currentStep = 3;
   const totalSteps = 4;
-  const [answers, setAnswers] = useState({});
 
-  const handleAnswer = (answer) => {
-    setAnswers({ ...answers, question1: answer });
+  const [score, setScore] = useState(0);
+  const [userAnswer, setUserAnswer] = useState(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    const urlScore = parseInt(router.query.score, 10) || 0;
+    setScore(urlScore);
+  }, [router.query.score]);
+
+  const handleAnswer = (newScore) => {
+    setUserAnswer(newScore);
   };
+
+  const handleNextQuestion = () => {
+    if (userAnswer !== null) {
+      router.push(`/question4_9/questionfour?score=${score + userAnswer}`);
+    }
+  };
+
   return (
     <>
       <Head>
@@ -37,35 +52,41 @@ export default function QuestionThree() {
             <p className={styles.description}>
               Any noticeable financial troubles?
             </p>
-            <div className={styles.button}>
-              <Link href="" onClick={() => handleAnswer("yes")} className={styles.link}>
+            <div>
+              <button
+                 className={styles.button}
+                onClick={() => handleAnswer(1)}
+              >
                 Yes
-              </Link>
+              </button>
             </div>
-            <div className={styles.button}>
-              <Link href="" onClick={() => handleAnswer("no")} className={styles.link}>
+            <div>
+              <button
+                 className={styles.button}
+                onClick={() => handleAnswer(0)}
+              >
                 No
-              </Link>
+              </button>
             </div>
             <div className={styles.image_container}>
               <Image
                 src="/Graphics/BigCoral3.png"
-                alt="whale holding a flower"
+                alt="coral"
                 width={75}
                 height={68}
               />
               <Image
                 src="/Graphics/BigCoral3.png"
-                alt="whale holding a flower"
+                alt="coral"
                 width={75}
                 height={68}
               />
             </div>
           </div>
           <div className={styles.buttonNext}>
-            <Link href={{ pathname: "/question4_9/questionfour", query: { answers: JSON.stringify(answers) }}} className={styles.link}>
+            <button onClick={handleNextQuestion} className={styles.link}>
               Next Question
-            </Link>
+            </button>
           </div>
           <div className={styles.wave}>
             <WaterWave />

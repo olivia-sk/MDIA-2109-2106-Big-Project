@@ -2,53 +2,40 @@ import Head from "next/head";
 import styles from "@/styles/Question4.module.css";
 import Navigation from "@/components/Menu";
 import ProgressBar from "@/components/progressbar";
-import Link from "next/link";
 import Image from "next/image";
 import WaterWave from "@/components/WaterWave";
 import { useRouter } from "next/router";
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 
 export default function QuestionFour() {
   const currentStep = 4;
   const totalSteps = 4;
 
+  const [score, setScore] = useState(0);
+  const [userAnswer, setUserAnswer] = useState(null);
   const router = useRouter();
-  const [answers, setAnswers] = useState(JSON.parse(router.query.answers || "{}"));
 
-  const handleAnswer = (answer) => {
-    setAnswers({ ...answers, question4: answer });
+  useEffect(() => {
+    const urlScore = parseInt(router.query.score, 10) || 0;
+    setScore(urlScore);
+  }, [router.query.score]);
+
+  const handleAnswer = (newScore) => {
+    setUserAnswer(newScore);
   };
 
-  const handleSubmit = () => {
-    // Calculate the score based on answers (customize the scoring logic as needed)
-    let q1 = answers.question1 === "yes";
-    let q2 = answers.question2 === "yes";
-    let q3 = answers.question3 === "yes";
-    let q4 = answers.question4;
-  
-    let result;
-  
-    if (q1 && q2 && q3) {
-      result = "severe";
-    } else if (q1 && q3) {
-      result = "moderate";
-    } else if (q2 && q3) {
-      result = "moderate";
-    } else {
-      result = "mild";
-    }
-  
-    // Redirect to the appropriate result page based on the result
-    if (result === "severe") {
-      router.push("/quiz_results10/resultsone");
-    } else if (result === "moderate") {
-      router.push("/quiz_results10/resultstwo");
-    } else {
-      router.push("/quiz_results10/resultsthree");
+  const handleFinish = () => {
+    if (userAnswer !== null) {
+      const finalScore = score + userAnswer;
+      if (finalScore >= 3) {
+        router.push("/quiz_results10/resultsthree");
+      } else if (finalScore >= 1) {
+        router.push("/quiz_results10/resultstwo");
+      } else {
+        router.push("/quiz_results10/resultsone");
+      }
     }
   };
-  
 
   return (
     <>
@@ -70,42 +57,41 @@ export default function QuestionFour() {
           </div>
           <div className={styles.content_container}>
             <p className={styles.description}>
-              How could the substance misuse severity be scaled?
+              Have you or a loved one ever experienced intense desires or urges
+              for a particular substance?
             </p>
-            <div className={styles.button}>
-              <Link href="" onClick={() => handleAnswer("mild")} className={styles.link}>
-                Mild
-              </Link>
+            <div>
+              <button
+                className={styles.button}
+                onClick={() => handleAnswer(1)}
+                >
+                Yes
+              </button>
             </div>
-            <div className={styles.button}>
-              <Link href="" onClick={() => handleAnswer("moderate")} className={styles.link}>
-                Moderate
-              </Link>
-            </div>
-            <div className={styles.button}>
-              <Link href="" onClick={() => handleAnswer("severe")} className={styles.link}>
-                Severe
-              </Link>
+            <div>
+              <button className={styles.button} onClick={() => handleAnswer(0)}>
+                No
+              </button>
             </div>
             <div className={styles.image_container}>
               <Image
                 src="/Graphics/BigCoral3.png"
-                alt="whale holding a flower"
+                alt="coral"
                 width={75}
                 height={68}
               />
               <Image
                 src="/Graphics/BigCoral3.png"
-                alt="whale holding a flower"
+                alt="coral"
                 width={75}
                 height={68}
               />
             </div>
           </div>
           <div className={styles.buttonNext}>
-            <Link href="" onClick={handleSubmit} className={styles.link}>
-              Finish
-            </Link>
+            <button onClick={handleFinish} className={styles.link}>
+              View Results
+            </button>
           </div>
           <div className={styles.wave}>
             <WaterWave />
