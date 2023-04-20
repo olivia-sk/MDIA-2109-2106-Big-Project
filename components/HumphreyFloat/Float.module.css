@@ -1,20 +1,21 @@
-.animation {
-    animation: float 3s ease-in-out infinite;
+.image_container {
+    margin: 2rem;
     z-index: 2;
+    position: relative;
+    animation-name: float;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
   }
   
-
-
-@keyframes float {
+  @keyframes float {
     0% {
-      transform: translateY(0px);
+      transform: translatey(0px);
     }
     50% {
-      transform: translateY(-10px);
+      transform: translatey(-15px);
     }
     100% {
-      transform: translateY(0px);
+      transform: translatey(0px);
     }
   }
-  
- 

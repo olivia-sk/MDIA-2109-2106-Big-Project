@@ -1,18 +1,16 @@
-import React from 'react';
-import styles from './Float.module.css';
-import Image from 'next/image';
+import Image from 'next/image'
+import styles from './Float.module.css'
 
 export default function HumphreyFloat() {
-
   return (
-   <>
-   <Image
-      className={styles.animation}
-      src="/Graphics/flowerwhale.png"
-      alt="whale holding a flower"
-      width={160}
-      height={95}
-    />
-   </>
+    <>
+          <Image
+            className={styles.image_container}
+            src="/Graphics/flowerwhale.png"
+            alt="whale holding a flower"
+            width={192}
+            height={122}
+          />
+    </>
   );
 }

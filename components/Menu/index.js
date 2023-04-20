@@ -43,17 +43,38 @@ export default function Navigation() {
         <nav>
           <h1 className={styles.menutitle}>Menu</h1>
           <ul>
-          <li>
-              <Link href="/" className={styles.ul}>Home</Link>
+            <li>
+              <Link href="/" className={styles.ul}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/get_started5/get_started" className={styles.ul}>Quiz</Link>
+              <Link href="/get_started5/get_started" className={styles.ul}>
+                Quiz
+              </Link>
             </li>
             <li>
-              <Link href="/disclaimer11/disclaimer" className={styles.ul}>Disclaimer</Link>
+              <Link href="/disclaimer11/disclaimer" className={styles.ul}>
+                Disclaimer
+              </Link>
             </li>
             <li>
-              <Link href="/resources13/resources"className={styles.ul}>Resources</Link>
+              <Link href="/resources13/resources" className={styles.ul}>
+                Resources
+              </Link>
+            </li>
+            <li>
+              <Link href="/askhumphrey/askhumphrey" className={styles.ul}>
+                {" "}
+                Ask Humphrey{" "}
+                <Image
+                  className={styles.image_container}
+                  src="/Graphics/flowerwhale.png"
+                  alt="whale holding a flower"
+                  width={35}
+                  height={23}
+                />
+              </Link>
             </li>
           </ul>
         </nav>

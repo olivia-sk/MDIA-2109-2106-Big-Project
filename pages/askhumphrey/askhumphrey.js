@@ -5,8 +5,17 @@ import styles from "@/styles/Askhumphrey.module.css";
 import Navigation from "@/components/Menu";
 import Link from "next/link";
 import axios from "axios";
+import HumphreyFloat from "@/components/HumphreyFloat";
 
 export default function AskHumphrey() {
+  useEffect(() => {
+    document.body.classList.add(styles.specificPage);
+
+    return () => {
+      document.body.classList.remove(styles.specificPage);
+    };
+  }, []);
+
   const [inputValue, setInputValue] = useState("");
   const [chatLog, setChatLog] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -66,24 +75,51 @@ export default function AskHumphrey() {
       <Navigation />
 
       <main className={styles.main}>
-        <h1 className={styles.title}>New Habits</h1>
-        {chatLog.map((message, index) => (
-          <div key={index}>{message.message}</div>
-        ))}
-        <form className={styles.message} onSubmit={handleSubmit}>
-          <textarea
-          
-            type="text"
-            placeholder="Ask Humphrey a question about addiction"
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            rows="1"
-
-          />
-          <button type="submit" className={styles.buttonContainer}>
-            <Image src="/Graphics/send.png" alt="Send" width={24} height={24} />
-          </button>
-        </form>
+        <div className={styles.specificPage}>
+          <h1 className={styles.title}>New Habits</h1>
+          <div className={styles.imageContainer}>
+            <HumphreyFloat />
+          </div>
+          <div className={styles.messagesContainer}>
+          {chatLog.map((message, index) => (
+            <div
+              key={index}
+              className={
+                message.type === "bot" ? styles.botMessage : styles.userMessage
+              }
+            >
+              {message.message}
+            </div>
+          ))}
+          </div>
+          <form className={styles.message} onSubmit={handleSubmit}>
+            <textarea
+              className={styles.noStyleInput}
+              type="text"
+              placeholder="Ask Humphrey 🐋👋"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              disabled={isLoading} // disable input field while bot is typing
+            />
+            <button type="submit" className={styles.buttonContainer}>
+              {isLoading ? (
+                <Image
+                  src="/Graphics/spinner.gif"
+                  alt="Loading"
+                  width={50}
+                  height={40}
+                />
+              ) : (
+                <Image
+                  src="/Graphics/send.png"
+                  alt="Send"
+                  width={24}
+                  height={24}
+                />
+              )}
+            </button>
+          </form>
+        </div>
       </main>
     </>
   );

@@ -27,8 +27,16 @@
 .ul {
   color: rgba(255, 255, 255, 0.5) !important;
   text-decoration: none;
+  display: flex;
+  flex-direction: row;
 }
 
+.image_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5rem;
+}
 
 .navigation ul li {
   display: flex;
