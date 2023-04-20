@@ -23,7 +23,7 @@ export default function Statistics() {
         </div>
         <div className={styles.div1}>
           <Pie />
-          <h2 className={styles.h2}>Substance Misuse Statistics</h2>
+          <h2>Substance Misuse Statistics</h2>
           <p>
             According to a 2021 survey done by Statistics Canada, 66% of
             households claim to use Alcohol. It is believed 50% of those users
