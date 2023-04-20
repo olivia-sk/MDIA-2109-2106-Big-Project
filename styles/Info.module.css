@@ -151,3 +151,10 @@
     bottom: 0em;
   }
 }
+
+@media only screen and (min-device-width: 428px) and (max-device-width: 926px) {
+  .wave {
+    position: relative;
+    bottom: 3em;
+  }
+}
