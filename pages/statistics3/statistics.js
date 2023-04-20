@@ -6,8 +6,8 @@ import Link from "next/link";
 import Navigation from "@/components/Menu";
 
 
-
 export default function Statistics() {
+
   return (
     <>
       <Head>
@@ -18,11 +18,12 @@ export default function Statistics() {
       </Head>
       <Navigation />
       <main className={styles.parent}>
+
           <div className={styles.div3}>
           <h1 className={styles.title}>New Habits</h1>
         </div>
         <div className={styles.div1}>
-          <Pie />
+          <Pie className={styles.pie}/>
           <h2>Substance Misuse Statistics</h2>
           <p>
             According to a 2021 survey done by Statistics Canada, 66% of
