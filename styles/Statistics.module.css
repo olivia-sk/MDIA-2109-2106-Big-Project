@@ -7,6 +7,10 @@
   height: 100vh;
 }
 
+.h2 {
+ font-size: var(--body-size);
+}
+
 .div3 {
   grid-area:  1 / 2 / 2 / 3;
   height: 5rem;
