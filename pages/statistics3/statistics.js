@@ -18,19 +18,19 @@ export default function Statistics() {
       </Head>
       <Navigation />
       <main className={styles.parent}>
-          <div class={styles.div3}>
+          <div className={styles.div3}>
           <h1 className={styles.title}>New Habits</h1>
         </div>
         <div className={styles.div1}>
           <Pie />
-          <h2>Substance Misuse Statistics</h2>
+          <h2 className={styles.h2}>Substance Misuse Statistics</h2>
           <p>
             According to a 2021 survey done by Statistics Canada, 66% of
             households claim to use Alcohol. It is believed 50% of those users
             may develop Substance Misuse Disorder (SUD)
           </p>
         </div>
-        <div class={styles.div2}>
+        <div className={styles.div2}>
           <div className={styles.button}>
             <Link href="/humphrey_intro4/intro" className={styles.link}>
               Continue
