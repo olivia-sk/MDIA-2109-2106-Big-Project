@@ -84,6 +84,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 7rem;
+  margin-top: 1rem;
 }
 
 .button {
@@ -186,6 +187,7 @@
     display: flex; /* Add these two lines to center the button */
     justify-content: center;
     align-items: center;
+    
   }
 
   .button {
