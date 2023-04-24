@@ -7,7 +7,7 @@ export default function Play() {
     <div className={styles.splineContainer}>
       <Spline
         className={styles.spline}
-        scene="https://prod.spline.design/hQORpiJiRsRNf3xT/scene.splinecode"
+        scene="https://prod.spline.design/DtYblc0PS3pXKUqT/scene.splinecode"
       />
     </div>
   );
