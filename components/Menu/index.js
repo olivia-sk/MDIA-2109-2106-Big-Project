@@ -65,9 +65,19 @@ export default function Navigation() {
             </li>
             <li>
               <Link href="/askhumphrey/askhumphrey" className={styles.ul}>
-                {" "}
-                Ask Humphrey{" "}
+                Ask Humphrey
                 <Image
+                  className={styles.image_container}
+                  src="/Graphics/flowerwhale.png"
+                  alt="whale holding a flower"
+                  width={35}
+                  height={23}
+                />
+              </Link>
+            </li>
+            <li>
+              <Link href="/play/play" className={styles.ul}>
+                Play  <Image
                   className={styles.image_container}
                   src="/Graphics/flowerwhale.png"
                   alt="whale holding a flower"
