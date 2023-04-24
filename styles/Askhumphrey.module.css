@@ -32,6 +32,7 @@ body.specificPage {
 
 .messagesContainer {
   margin-bottom: 6rem; /* Adjust the value based on the height of the textarea */
+  padding-bottom: 2rem; /* Added */
 }
 
 .message {
@@ -63,16 +64,16 @@ body.specificPage {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  margin-bottom: 9rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
-
 
 .userMessage {
   border: 4px solid var(--main-purple);
   border-radius: 50px;
   padding: 1rem;
   margin: 1rem;
-  width: 55%; 
+  width: 55%;
   text-align: left;
   display: flex;
   flex-direction: row;
@@ -84,8 +85,9 @@ body.specificPage {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  margin-top: 1rem; /* Added */
+  margin-bottom: 2rem; /* Adjusted */
 }
-
 
 .imageContainer {
   display: flex;

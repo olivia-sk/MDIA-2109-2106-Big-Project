@@ -6,6 +6,7 @@ import Navigation from "@/components/Menu";
 import Link from "next/link";
 import axios from "axios";
 import HumphreyFloat from "@/components/HumphreyFloat";
+import { isSubstanceAbuseRelated } from "@/utils/substanceAbuseFilter";
 
 export default function AskHumphrey() {
   useEffect(() => {
@@ -21,6 +22,18 @@ export default function AskHumphrey() {
   const [isLoading, setIsLoading] = useState(false);
 
   const sendMessage = (message) => {
+    if (!isSubstanceAbuseRelated(message)) {
+      setChatLog((prevChatLog) => [
+        ...prevChatLog,
+        {
+          type: "bot",
+          message:
+            "Sorry, I can only answer questions related to substance abuse.",
+        },
+      ]);
+      return;
+    }
+
     const url = "https://api.openai.com/v1/chat/completions";
     const headers = {
       "Content-type": "application/json",
@@ -50,14 +63,19 @@ export default function AskHumphrey() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
+  
+    // check if inputValue is empty or contains only whitespace
+    if (!inputValue.trim()) {
+      return; // Prevent submission if inputValue is empty or has only whitespace
+    }
+  
     setChatLog((prevChatLog) => [
       ...prevChatLog,
       { type: "user", message: inputValue },
     ]);
-
+  
     sendMessage(inputValue);
-
+  
     setInputValue("");
   };
 
@@ -81,16 +99,18 @@ export default function AskHumphrey() {
             <HumphreyFloat />
           </div>
           <div className={styles.messagesContainer}>
-          {chatLog.map((message, index) => (
-            <div
-              key={index}
-              className={
-                message.type === "bot" ? styles.botMessage : styles.userMessage
-              }
-            >
-              {message.message}
-            </div>
-          ))}
+            {chatLog.map((message, index) => (
+              <div
+                key={index}
+                className={
+                  message.type === "bot"
+                    ? styles.botMessage
+                    : styles.userMessage
+                }
+              >
+                {message.message}
+              </div>
+            ))}
           </div>
           <form className={styles.message} onSubmit={handleSubmit}>
             <textarea
@@ -99,7 +119,7 @@ export default function AskHumphrey() {
               placeholder="Ask Humphrey 🐳👋"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              disabled={isLoading} 
+              disabled={isLoading}
             />
             <button type="submit" className={styles.buttonContainer}>
               {isLoading ? (
