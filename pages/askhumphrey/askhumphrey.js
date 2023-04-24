@@ -96,10 +96,10 @@ export default function AskHumphrey() {
             <textarea
               className={styles.noStyleInput}
               type="text"
-              placeholder="Ask Humphrey 🐋👋"
+              placeholder="Ask Humphrey 🐳👋"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              disabled={isLoading} // disable input field while bot is typing
+              disabled={isLoading} 
             />
             <button type="submit" className={styles.buttonContainer}>
               {isLoading ? (

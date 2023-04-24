@@ -63,6 +63,7 @@ body.specificPage {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  margin-bottom: 9rem;
 }
 
 
