@@ -74,7 +74,13 @@ body {
 *::-webkit-scrollbar-thumb {
   background-color: var(--main-purple);
   border-radius: 14px;
+  border: 3px solid var(--dl-black);
 }
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--tertiary);
+}
+
 
 
 @media (prefers-color-scheme: dark) {

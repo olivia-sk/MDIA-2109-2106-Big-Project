@@ -76,6 +76,11 @@ body {
   border-radius: 14px;
 }
 
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--tertiary);
+}
+
+
 
 @media (prefers-color-scheme: dark) {
   html {
