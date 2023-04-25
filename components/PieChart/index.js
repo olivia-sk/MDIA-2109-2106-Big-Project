@@ -2,6 +2,7 @@ import React from 'react'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
 import { Pie } from 'react-chartjs-2'
 import styles from './Pie.module.css'
+import { pieData } from '@/data/data';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -10,7 +11,7 @@ export const data = {
   datasets: [
     {
       label: '% of Household Users',
-      data: [66, 18, 12, 4,],
+      data: pieData,
       backgroundColor: [
         'rgba(147, 129, 255, 0.2)',
         'rgba(202, 219, 42, 0.2)',
@@ -31,7 +32,7 @@ export const data = {
 export default function App() {
   return (
     <div className={styles.pie}>
-        <Pie data={data} maintainAspectRatio={false}/>
+      <Pie data={data} maintainAspectRatio={false} />
     </div>
   )
 }
