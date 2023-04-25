@@ -63,8 +63,9 @@ body {
   color: var(--radial-text);
   background-color: var(--creme);
 }
+
 *::-webkit-scrollbar {
-  width: 13px;
+  width: 5px;
 }
 
 *::-webkit-scrollbar-track {
@@ -73,7 +74,7 @@ body {
 
 *::-webkit-scrollbar-thumb {
   background-color: var(--main-purple);
-  border-radius: 14px;
+  border-radius: 20px;
 }
 
 
