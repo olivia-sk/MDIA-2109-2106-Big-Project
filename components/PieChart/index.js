@@ -29,6 +29,7 @@ export const data = {
   ],
 };
 
+
 export default function App() {
   return (
     <div className={styles.pie}>
