@@ -64,11 +64,6 @@ export default function Navigation() {
               </Link>
             </li>
             <li>
-              <Link href="/about15/about" className={styles.ul}>
-                About
-              </Link>
-            </li>
-            <li>
               <Link href="/askhumphrey/askhumphrey" className={styles.ul}>
                 Ask Humphrey
                 <Image
@@ -81,7 +76,7 @@ export default function Navigation() {
               </Link>
             </li>
             <li>
-              <Link href="/playtutorial/tutorial" className={styles.ul}>
+              <Link href="/play/play" className={styles.ul}>
                 Play  <Image
                   className={styles.image_container}
                   src="/Graphics/flowerwhale.png"
