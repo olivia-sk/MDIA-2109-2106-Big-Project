@@ -1,0 +1,21 @@
+.logo {
+  position: fixed;
+  top: 8px;
+  width: 280px;
+  height: 100%;
+  left: 10px
+  }
+
+.images {
+  border-radius: 50%;
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px -10px #bdaef4;
+  }
+  to {
+    box-shadow: 0 0 10px 10px #bdaef4;
+  }
+}

@@ -1,0 +1,12 @@
+.logo {
+    position: fixed;
+  top: 0;
+  left: -500px;
+  width: 280px;
+  height: 100%;
+  background-image: url("/Menu/background.png");
+  background-size: cover;
+  transition: 0.5s;
+  border-radius: 27px 0 0 27px;
+  z-index: 3;
+  }
