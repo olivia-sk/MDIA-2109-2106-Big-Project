@@ -84,7 +84,10 @@
   z-index: 1;
 
 }
-
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+}
 .wave {
   position: relative;
   bottom: 5em;

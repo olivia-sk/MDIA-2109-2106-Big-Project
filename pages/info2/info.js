@@ -19,7 +19,7 @@ export default function Info() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Logo/>
+        <Logo />
         <Navigation />
         <div className={styles.container}>
 
@@ -33,13 +33,22 @@ export default function Info() {
             </p>
           </div>
 
-          <div className={styles.button}>
-            <Link href="/statistics3/statistics" className={styles.link}>
-              Continue
-            </Link>
+          <div className={styles.buttonContainer}>
+            <div className={styles.button}>
+              <Link href="/" className={styles.link}>
+                Back
+              </Link>
+            </div>
+            <div className={styles.button}>
+              <Link href="/statistics3/statistics" className={styles.link}>
+                Continue
+              </Link>
+            </div>
           </div>
+
+
           <div className={styles.wave}>
-          <WaterWave />
+            <WaterWave />
           </div>
         </div>
       </main>

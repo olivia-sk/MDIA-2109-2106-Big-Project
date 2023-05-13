@@ -89,6 +89,11 @@
 
 }
 
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+}
+
 .wave {
     position: relative;
     bottom: 0em;

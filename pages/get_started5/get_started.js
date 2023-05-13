@@ -19,7 +19,7 @@ export default function Getstarted() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Logo/>
+        <Logo />
         <Navigation />
         <div className={styles.container}>
 
@@ -40,17 +40,26 @@ export default function Getstarted() {
               </div>
 
             </p>
-            <div className={styles.button}>
-              <Link href="/question1_6/questionone" className={styles.link}>
-                Start Quiz
+
+            <div className={styles.buttonContainer}>
+              <div className={styles.button}>
+                <Link href="/question1_6/questionone" className={styles.link}>
+                  Start Quiz
+                </Link>
+              </div>
+            </div>            <div className={styles.button}>
+              <Link href="/humphrey_intro4/intro" className={styles.link}>
+                Back
               </Link>
             </div>
           </div>
-          <div className={styles.wave}>
-            <WaterWave />
-          </div>
+
+
+        <div className={styles.wave}>
+          <WaterWave />
         </div>
-      </main>
+      </div>
+    </main >
     </>
   );
 }

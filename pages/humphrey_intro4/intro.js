@@ -19,7 +19,7 @@ export default function Humphreyintro() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Logo/>
+        <Logo />
         <Navigation />
         <div className={styles.container}>
 
@@ -31,19 +31,24 @@ export default function Humphreyintro() {
               disorder (SUD), and he will be with you along the way through the
               quiz.
             </p>
-
-            <div className={styles.button}>
-              <Link href="/get_started5/get_started" className={styles.link}>
-                Let's Go
+            <div className={styles.buttonContainer}>
+              <div className={styles.button}>
+                <Link href="/get_started5/get_started" className={styles.link}>
+                  Let's Go
+                </Link>
+              </div>
+            </div>            <div className={styles.button}>
+              <Link href="/statistics3/statistics" className={styles.link}>
+                Back
               </Link>
             </div>
           </div>
 
-          <div className={styles.wave}>
-            <WaterWave />
-          </div>
+        <div className={styles.wave}>
+          <WaterWave />
         </div>
-      </main>
+      </div>
+    </main >
     </>
   );
 }
